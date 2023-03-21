@@ -13,7 +13,7 @@ export const typeOrmConfig = (configService: ConfigService) => ({
   database: configService.get('POSTGRES_DB'),
   schema: configService.get('POSTGRES_SCHEMA'),
   entities: [User, Wish, Wishlist, Offer],
-  synchronize: configService.get<boolean>('POSTGRES_POSTGRES_SYNCHRONIZE') || false,
+  synchronize: configService.get<boolean>('POSTGRES_SYNCHRONIZE') || false,
 });
 
 export const jwtConfig = (configService: ConfigService) => ({
